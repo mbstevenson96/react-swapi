@@ -17,19 +17,23 @@ const Starships = (props) => {
 
   return (
     <>
-      <h3>This is my Starships component</h3>
+      <h3 id='main-page-h3'>Star Wars Starships</h3>
       {starships.length ?
       <>
         {starships.map(starship => 
-            <div key={starship.model}>
-              <Link to='/starship' state={{starship}}>{starship.name}</Link>
-            <br />
+          <div key={starship.model} id="ship-container">
+            <Link to='/starship' state={{starship}}> 
+              <button>
+                {starship.name}
+              </button>
+            </Link>
           </div>
         )}
       </>
       :
       <>
-        <h3>Loading Starships...</h3>
+        <h3>Loading Starships...
+        </h3>
       </>
       }
     </>

@@ -19,9 +19,9 @@ const StarshipDetails = (props) => {
 
   return (
     <>
-      <h3>StarshipDetails Component</h3>
       <h4>Name: {starshipDetails.name}</h4>
       <h4>Model: {starshipDetails.model}</h4>
+      <Link id='return-link' to='/'>Return</Link>
     </>
   );
 }
